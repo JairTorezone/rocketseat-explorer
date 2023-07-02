@@ -1,4 +1,4 @@
-# Java Inside
+# Rocketseat - Explorer
 
 <p align="center">
     Rocketseat - Explore - Módulos do curso rocketseat. <br>
