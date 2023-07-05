@@ -6,7 +6,7 @@ body {
 }
 
 .page {
-  width: 1280px;
+  width: 1000px;
   margin: 65px auto 0;
 }
 
@@ -50,11 +50,13 @@ h1 {
 h1 span {
   color: #89c5cc;
 }
-p {
+section p {
   color: #7d7987;
   font-size: 14px;
 
   line-height: 28px;
+
+  margin: 40px 0;
 }
 
 button {
@@ -63,9 +65,19 @@ button {
   line-height: normal;
 }
 
+main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 footer {
   color: #1f1534;
   font-size: 14px;
+
+  text-align: center;
+
+  margin-top: 80px;
 }
 footer a {
   font-weight: 700;
