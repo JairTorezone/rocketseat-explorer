@@ -1,0 +1,115 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: "JetBrains Mono", monospace;
+  background: #2c2b3d;
+}
+
+.container {
+  max-width: 1092px;
+  margin: 0 auto;
+  padding-top: 71px;
+}
+
+/********************************** Style menu */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 100px;
+}
+
+#logo {
+  width: 168px;
+  height: 23px;
+}
+
+/****** style ul*/
+ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 64px;
+  color: #fff;
+  list-style: none;
+}
+
+ul li a {
+  color: #fff;
+  text-decoration: none;
+
+  font-size: 14px;
+
+  font-weight: 500;
+  line-height: 28px;
+}
+
+/**********************************  Style section */
+main {
+  display: flex;
+  justify-content: space-between;
+  gap: 77px;
+}
+
+main img {
+  width: 401px;
+  height: 283px;
+}
+section {
+  text-align: center;
+}
+
+section h1 {
+  color: #fff;
+  text-align: center;
+
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 40px;
+
+  margin-bottom: 50px;
+}
+
+section span {
+  color: #00bfa6;
+}
+
+section p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+
+  font-weight: 400;
+  line-height: 28px;
+
+  color: #c2c2c2;
+  text-align: center;
+}
+
+/**********************************  Style footer */
+footer {
+  color: #fff;
+  text-align: center;
+
+  font-size: 14px;
+  font-style: normal;
+
+  line-height: 28px;
+
+  margin: 167px auto 23px;
+}
+.line {
+  width: 568px;
+  height: 1px;
+  background: #00bfa6;
+  margin: 0 auto 23px;
+}
+
+#padlock {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+}
