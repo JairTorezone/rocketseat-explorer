@@ -70,9 +70,14 @@ legend {
 .line {
   height: 1px;
   border: 1px solid #e6e6f0;
-  margin: 8px auto 32px;
+}
+.mt-16 {
+  margin: 16px auto 32px;
 }
 
+.mt-8 {
+  margin: 8px auto 32px;
+}
 .col-2 {
   display: flex;
   gap: 22px;
@@ -131,6 +136,7 @@ footer {
   border-radius: 0px 0px 20px 20px;
   background: #535971;
   padding: 52px 71px;
+  margin-bottom: 20px;
 }
 footer button {
   color: #fff;
@@ -151,6 +157,10 @@ footer button {
 button:hover {
   background: #d26279;
 }
+.form-wraper input:focus {
+  outline: 1px solid #535971;
+}
+
 input:invalid {
-  border: 1px solid #ff1010;
+  outline: 1px solid #ff5374;
 }

@@ -25,7 +25,7 @@
         <!--Informações pessoais-->
         <fieldset>
           <legend >Informações pessoais</legend>
-          <div class="line"></div>
+          <div class="line mt-16"></div>
 
           <div class="col-2">
             <div class="form-wraper">
@@ -49,42 +49,42 @@
             <label for="event-password"
               >Senha <span>(mínimo de 6 caracteres)</span></label
             >
-            <input type="password" id="event-password" required />
+            <input type="password" id="event-password" minlength="6" required />
           </div>
         </fieldset>
         <!--Informações do mentor-->
         <fieldset>
           <legend>Informações do mentor</legend>
-          <div class="line"></div>
+          <div class="line mt-8"></div>
 
           <div class="form-wraper">
             <label for="event-info"
               >Nome do seu mentor <span>(só o primeiro nome)</span></label
             >
-            <input type="text" id="event-info" required />
+            <input type="text" id="event-info"  />
           </div>
         </fieldset>
 
         <!--Seus horários disponíveis-->
         <fieldset>
           <legend>Informações do mentor</legend>
-          <div class="line"></div>
+          <div class="line mt-8"></div>
 
           <h2>Primeira mentoria</h2>
 
           <div class="col-3">
             <div class="form-wraper cl1">
               <label for="event-date">Data <span>(DD/MM/AAAA)</span></label>
-              <input type="date" id="event-date" required />
+              <input type="date" id="event-date"  />
             </div>
             
               <div class="form-wraper cl2">
                 <label for="event-begin">Das</span></label>
-                <input type="time" id="event-begin" required />
+                <input type="time" id="event-begin"  />
               </div>
               <div class="form-wraper cl3">
                 <label for="event-end">Até </span></label>
-                <input type="time" id="event-end" required />
+                <input type="time" id="event-end"  />
               </div>
            
           </div>
@@ -94,16 +94,16 @@
            <div class="col-3">
             <div class="form-wraper cl1">
               <label for="event-date">Data <span>(DD/MM/AAAA)</span></label>
-              <input type="date" id="event-date" required />
+              <input type="date" id="event-date"  />
             </div>
             
               <div class="form-wraper cl2">
                 <label for="event-begin">Das</span></label>
-                <input type="time" id="event-begin" required />
+                <input type="time" id="event-begin"  />
               </div>
               <div class="form-wraper cl3">
                 <label for="event-end">Até </span></label>
-                <input type="time" id="event-end" required />
+                <input type="time" id="event-end"  />
               </div>
            
           </div>
@@ -111,7 +111,7 @@
       </form>
 
       <footer>
-        <div class="button"><button>Salvar</button></div>
+        <div class="button"><button type="submits" form="my-form">Salvar</button></div>
       </footer>
     </div>
   </body>
