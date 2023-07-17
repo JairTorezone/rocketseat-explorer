@@ -39,13 +39,76 @@
               <input type="text" id="lastname" />
             </div>
           </div>
-
+          <!--E-mail-->
           <div class="event-wrapper">
             <label for="email"
               >Email <span>(digite um email válido)</span>
-              <input type="email" name="email" id="email" />
             </label>
+            <input type="email" name="email" id="email" />
           </div>
+
+          <fieldset>
+            <legend>Informações do mentor</legend>
+            <div class="line"></div>
+
+            <div class="event-wrapper">
+              <label for="select">Selecione quem foi o seu mentor </label>
+              <select name="envent-option" id="select">
+                <option value="#"></option>
+                <option value="Mayk">Mayk</option>
+                <option value="Diego">Diego</option>
+                <option value="Rodrigo">Rodrigo</option>
+                <option value="Nelio">Nelio Alves</option>
+                <option value="boni">Bonieky</option>
+                <option value="carlos">Carlos Tosin</option>
+                <option value="Andre">Andre Milani</option>
+                <option value="alex">Alex Fernandes</option>
+                <option value="Loyane">Loyane</option>
+              </select>
+            </div>
+
+            <div class="event-wrapper">
+              <label for="feedback">Feedback sobre o mentor </label>
+              <textarea
+                name="feedback"
+                id="feedback"
+                cols="30"
+                rows="10"
+              ></textarea>
+            </div>
+
+            <div class="check-wrapper">
+              <input type="checkbox" id="event-confirmation" />
+              <label for="event-confirmation"
+                >Todas as minhas dúvidas foram esclarecidas durante a
+                mentoria.</label
+              >
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Agendando próxima mentoria</legend>
+            <div class="line"></div>
+
+            <div class="col-3">
+              <div class="event-wrapper f1">
+                <label for="date">Data <span>(DD/MM/AAAA)</span> </label>
+                <input type="date" name="date" id="date" />
+              </div>
+
+              <div class="event-wrapper f2">
+                <label for="begin">Das </label>
+                <input type="time" name="begin" id="begin" />
+              </div>
+
+              <div class="event-wrapper f3">
+                <label for="end">Até </label>
+                <input type="time" name="end" id="end" />
+              </div>
+            </div>
+          </fieldset>
+
+          <button>Salvar</button>
         </div>
       </form>
     </div>

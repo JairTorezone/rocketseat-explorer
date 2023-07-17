@@ -10,7 +10,7 @@ body::before {
   content: "";
 
   background: #293241;
-  height: 465px;
+  height: 445px;
   width: 100%;
 
   position: absolute;
@@ -31,7 +31,6 @@ label {
 .container {
   width: 750px;
   margin: 0 auto;
-  border: 1px solid red;
 }
 header {
   color: #fff;
@@ -56,28 +55,24 @@ header img {
   margin-bottom: 32px;
 }
 form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
   background: #fff;
-  position: relative;
-  margin: auto;
-  border: 1px solid red;
-
-  border-radius: 20px 20px 0px 0px;
+  border-radius: 20px 20px 20px 20px;
+  min-width: 622px;
+  margin-bottom: 50px;
 }
 .wrapper {
   padding: 0 64px;
-  width: 100%;
+}
+.col-2 {
   display: flex;
-  flex-direction: column;
-  min-width: 622px;
+  gap: 22px;
+  margin-bottom: 15px;
 }
 
 .event-wrapper {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 h2 {
@@ -102,18 +97,120 @@ label {
   font-size: 14px;
   font-weight: 400;
   line-height: 24px;
+  margin-bottom: 8px;
 }
-
+span {
+  color: #c1bccc;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px;
+}
 input {
   border-radius: 8px;
   border: 1px solid #e6e6f0;
   background: #fafafc;
-  width: 100%;
+
   height: 55px;
+  padding: 10px;
 }
-.col-2 {
+
+fieldset {
+  margin-top: 32px;
+  border: none;
+}
+legend {
+  text-align: center;
+  color: #253b51;
+}
+.line {
+  height: 1px;
+  background: #e6e6f0;
+  margin: 9px auto 32px;
+}
+select {
+  width: 300px;
+  height: 55.529px;
+  border-radius: 8px;
+  border: 1px solid var(--back-lines-in-white, #e6e6f0);
+  background: var(--shapes-02, #fafafc);
+
+  appearance: none;
+  padding: 5px;
+
+  margin-bottom: 31px;
+}
+
+textarea {
+  border-radius: 8px;
+  border: 1px solid var(--back-lines-in-white, #e6e6f0);
+  background: var(--shapes-02, #fafafc);
+  resize: none;
+  padding: 15px;
+  margin-bottom: 30px;
+}
+.check-wrapper {
+  position: relative;
+}
+.check-wrapper label {
   display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+}
+.check-wrapper input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+
+  opacity: 0;
+}
+.check-wrapper label::before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  display: block;
+
+  border: 1px solid #e6e6f0;
+  border-radius: 8px;
+}
+
+.check-wrapper input:checked + label::before {
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_1917_14)'%3E%3Cpath d='M9 16.17L4.83 12L3.41 13.41L9 19L21 7L19.59 5.59L9 16.17Z' fill='%2342D3FF'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_1917_14'%3E%3Crect width='24' height='24' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+}
+.check-wrapper input:focus + label::before {
+  outline: 2px solid #000;
+}
+.col-3 {
+  display: flex;
+}
+
+.col-3 input {
+  appearance: none;
+}
+.col-3 .f1 {
+  flex: 2;
+  margin-right: 32px;
+}
+.col-3 .f2,
+.col-3 .f3 {
   flex: 1;
-  flex-wrap: nowrap;
-  gap: 22px;
+  margin-right: 10px;
+}
+button {
+  color: #fff;
+  font-family: Staatliches;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 26px;
+
+  border: none;
+  border-radius: 8px;
+  background: #f67669;
+  padding: 15px 40px;
+  width: 100%;
+
+  margin: 64px auto;
+  cursor: pointer;
 }
