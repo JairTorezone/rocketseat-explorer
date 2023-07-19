@@ -8,13 +8,14 @@
 }
 
 :root {
+  font-family: "Source Serif 4", serif;
   font-size: 62.5%;
 }
 
 body {
-  font-family: "Source Serif 4", serif;
-  background: #fff;
   font-size: 1.6rem;
+
+  color: #a54328;
 }
 main {
   max-width: 32rem;
@@ -22,9 +23,14 @@ main {
 
   padding: 5.4rem 3.7rem;
   box-sizing: content-box;
+
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
 }
 img {
   width: 100%;
+  margin-block: 3.2rem;
 }
 button {
   font-family: "Source Serif 4", serif;
@@ -37,7 +43,7 @@ button {
   border-radius: 0.6rem;
   background: #a54328;
 
-  margin-top: 1.8rem;
+  margin-top: 3.2rem;
 }
 
 h1,
@@ -46,9 +52,22 @@ h2 {
   line-height: 3.6rem;
 }
 
+h2 {
+  margin-bottom: 32px;
+}
+
 p,
 li,
 strong {
   font: 1.4rem;
   line-height: 1.8rem;
+}
+
+ul,
+ol {
+  padding-left: 2.4rem;
+}
+
+ul {
+  margin-bottom: 2.4rem;
 }
