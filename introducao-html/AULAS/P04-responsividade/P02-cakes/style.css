@@ -44,6 +44,7 @@ button {
   background: #a54328;
 
   margin-top: 3.2rem;
+  cursor: pointer;
 }
 
 h1,
