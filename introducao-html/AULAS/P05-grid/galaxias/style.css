@@ -10,6 +10,7 @@ body {
   padding: 73px 104px;
   display: grid;
   justify-content: center;
+  font-family: "Mulish", sans-serif;
 }
 
 header h1 {
