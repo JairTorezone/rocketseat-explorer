@@ -16,7 +16,7 @@
                 <img width="300" height="1"> 
                 <p> 
                     <small>
-                        MÓDULO
+                        MÓDULOS
                     </small>
                 </p>
             </th>
