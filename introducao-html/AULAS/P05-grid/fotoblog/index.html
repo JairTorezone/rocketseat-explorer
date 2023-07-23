@@ -16,11 +16,40 @@
   </head>
   <body>
     <div id="app">
-      <header class="container">header</header>
+      <header class="container">
+        <nav>
+          <img src="./assets/camera.svg" alt="imagem da logo que é uma camra" />
+          <ul>
+            <li>home</li>
+            <li class="active">Galeria</li>
+          </ul>
+        </nav>
+
+        <form>
+          <div class="input-wrapper">
+            <label for="search">Pesquise por imagens e coleções</label>
+            <input
+              type="text"
+              name="search"
+              id="search"
+              placeholder="Pesquise por imagens e coleções"
+            />
+          </div>
+        </form>
+
+        <img
+          class="avatar"
+          src="https://randomuser.me/api/portraits/women/5.jpg"
+          alt="imagem de uma mulher"
+        />
+      </header>
+
       <main>
         <div class="container">main</div>
       </main>
-      <footer class="container">footer</footer>
+      <footer class="container">
+        <p>© 2023 - Rocketseat Explorer</p>
+      </footer>
     </div>
   </body>
 </html>
