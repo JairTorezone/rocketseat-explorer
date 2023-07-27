@@ -11,6 +11,8 @@
 
 :root {
   font-size: 62.5%;
+  font-family: "Roboto", sans-serif;
+
   --fs-body: 1.6rem;
 
   --bg-color-header: #8e9aaf;
@@ -20,13 +22,14 @@
 
   --font-color-title: #fff;
   --font-color-text-p: #23053a;
+  --font-size-desck: "Roboto", sans-serif;
 }
 body {
   font-size: var(--fs-body);
 }
 
 .container {
-  width: 38.4rem;
+  max-width: 38.4rem;
   margin: 0 auto;
 }
 
@@ -36,7 +39,6 @@ header {
   align-items: center;
 
   background-color: var(--bg-color-header);
-  width: 100%;
 }
 header img {
   margin-top: 3.2rem;
@@ -47,33 +49,35 @@ header h1 {
 
   color: var(--font-color-title);
 
-  font-size: 40px;
+  font-size: 3.6rem;
 
   font-weight: 400;
-  line-height: 3.4rem; /* 85% */
+  line-height: 3.2rem; /* 85% */
   letter-spacing: 2px;
 
   background: var(--bg-color-title);
-  padding: 0.8rem 8.6rem;
+
   width: 100%;
   text-align: center;
+
+  padding: 15px;
 }
 
-main {
-  background-color: var(--bg-color-main);
-}
-
-main p {
+header p {
   color: var(--font-color-text-p);
   text-align: center;
   font-family: Palanquin;
-  font-size: 1.8srem;
+  font-size: 2rem;
 
   font-weight: 400;
   line-height: 2rem;
 
   padding: 14px 36px 63px;
-  width: fit-content;
+}
+
+header p,
+main {
+  background-color: var(--bg-color-main);
 }
 
 main .wrapper {
@@ -114,6 +118,32 @@ button {
 
 .card img {
   animation: downTop 700ms 350ms backwards;
+  max-width: 32rem;
+}
+/*.card + .PALETAS-D,
+.card + .PICOLES-D {
+  display: none;
+}
+*/
+
+.card + div:nth-child(3),
+.card + div:nth-child(4),
+header > img:nth-child(2) {
+  display: none;
+}
+
+footer {
+  display: none;
+}
+
+footer p {
+  color: #4a4e69;
+  font-family: Open Sans;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 2.8rem;
+  text-align: center;
 }
 
 @keyframes topdown {
@@ -139,6 +169,83 @@ button {
     transform: translateY(0);
   }
 }
+/*******************************************RESPONSIVIDADE */
+@media (min-width: 1200px) {
+  .container {
+    width: 100vw;
+    margin: 0;
 
-@media (min-width: 768px) {
+    display: grid;
+    grid-template-areas:
+      "header main main"
+      "header footer  footer";
+
+    grid-template-columns: max-content;
+    grid-template-rows: max-content;
+  }
+
+  header {
+    grid-area: header;
+    width: 37.7rem;
+  }
+  header h1 {
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 34px;
+  }
+  header p {
+    background: var(--bg-color-header);
+    font-family: var(--font-size-desck);
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    max-width: 271px;
+    height: 275px;
+    color: var(--font-color-title);
+  }
+
+  main {
+    grid-area: main;
+    background-color: var(--font-color-title);
+  }
+
+  main .wrapper {
+    width: 100%;
+    grid-template-areas:
+      "A B A"
+      "C D C";
+
+    gap: 3.2rem;
+
+    padding: 0;
+
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(3, auto);
+
+    margin: 50px 81px;
+  }
+  .card img {
+    margin: 0;
+    padding: 0;
+    height: fit-content;
+  }
+  .card + div:nth-child(3),
+  .card + div:nth-child(4),
+  header > img:nth-child(2) {
+    display: block;
+  }
+  header > img:nth-child(1) {
+    display: none;
+  }
+
+  .card button {
+    display: none;
+  }
+
+  footer {
+    grid-area: footer;
+    display: block;
+  }
 }
