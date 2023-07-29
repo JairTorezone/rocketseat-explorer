@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: "Mulish", sans-serif;
+}
+:root {
+  font-size: 62.5%;
+
+  --bg-color-primary: #387e96;
+  --bg-color-icons: #065e7c;
+  --bg-color-white: #fff;
+
+  --text-color-white: #fff;
+  --text-color-title: #202024;
+  --text-color-description: #121214;
+}
+body {
+  font-size: 1.6rem;
+}
+
+.container {
+  max-width: 43rem;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "aside"
+    "footer";
+}
+
+header {
+  background-color: var(--bg-color-primary);
+  padding: 1.2rem 2.8rem;
+
+  display: flex;
+  gap: 2.5rem;
+}
+
+header .paw {
+  width: 4rem;
+  height: 4rem;
+  background-color: var(--bg-color-white);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+
+  padding: 0.8rem;
+}
+
+header form {
+  flex: 1;
+}
+
+.input-wrapper label {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+}
+
+.input-wrapper input {
+  width: 100%;
+  padding: 1.2rem 1.4rem;
+
+  border-radius: 0.4rem;
+  background: rgba(255, 255, 255, 0.2);
+  border: 0;
+
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.input-wrapper input::placeholder {
+  opacity: 1;
+
+  color: var(--bg-color-white);
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%;
+
+  padding: 1.2rem 1.4rem;
+}
+
+header .avatar {
+  width: 4.2rem;
+  height: 4.2rem;
+  border-radius: 50%;
+}
+
+/******************** style main icon*/
+.icon {
+  background: #065e7c;
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
