@@ -33,12 +33,14 @@ body {
     "main"
     "aside"
     "footer";
+
+  grid-template-rows: max-content;
 }
 
-h2 {
+h2,
+h3 {
   color: var(--text-color-title);
 
-  font-size: 2.4rem;
   font-style: normal;
   font-weight: 700;
   line-height: 160%;
@@ -93,16 +95,18 @@ header form {
 
 .input-wrapper input {
   width: 100%;
-  padding: 1.2rem 1.4rem;
+  padding: 1.2rem 1.8rem;
 
   border-radius: 0.4rem;
   background: rgba(255, 255, 255, 0.2);
   border: 0;
 
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: 600;
 
   color: var(--bg-color-white);
+
+  outline: none;
 }
 
 .input-wrapper input::placeholder {
@@ -123,6 +127,8 @@ header .avatar {
   border-radius: 50%;
 
   transition: scale 200ms ease-in;
+
+  object-fit: cover;
 }
 
 /*************************************Style main ***/
@@ -147,7 +153,9 @@ main .img {
 main .img:hover {
   transform: scale(1.1);
 }
-
+main h2 {
+  font-size: 2.4rem;
+}
 main .icons {
   margin-top: 0.8rem;
   display: flex;
@@ -204,6 +212,10 @@ aside {
   gap: 1.6rem;
 }
 
+.card h3 {
+  font-size: 1.8rem;
+}
+
 .card p {
   color: var(--text-color-description);
 
@@ -233,3 +245,96 @@ footer {
 
   width: 100%;
 }
+
+/*************************************Style responsive ***/
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 100vw;
+    margin: 0;
+
+    display: grid;
+    grid-template-areas:
+      "header header"
+      "main aside"
+      "footer footer";
+
+    grid-template-rows: max-content;
+    grid-template-columns: min-content;
+  }
+  header {
+    padding-inline: 11.2rem;
+  }
+
+  main {
+    padding-left: 11.2rem;
+    margin-right: 3.4rem;
+  }
+
+  main {
+    margin-top: 4rem;
+  }
+  main .img {
+    width: 80.3rem;
+    height: 40.5rem;
+  }
+}
+
+/*********** responsive - x-small*/
+@media (max-width: 429px) {
+  .container {
+    max-width: 350px;
+    margin: 0 auto;
+
+    grid-template-rows: max-content;
+    grid-template-columns: min-content;
+  }
+  /** style header*/
+  header {
+    padding: 1rem;
+  }
+
+  header .paw {
+    width: 3.2rem;
+    height: 3.2rem;
+  }
+
+  header form {
+    flex: 0;
+  }
+
+  .input-wrapper input {
+    width: 150px;
+
+    padding: 1rem 1rem;
+
+    font-size: 1.2rem;
+  }
+
+  header .avatar {
+    width: 3.2rem;
+    height: 3.2rem;
+    border-radius: 50%;
+  }
+  /*************** style main*/
+  main .img {
+    width: 100%;
+    height: 20.5rem;
+  }
+
+  main .wrapper h2 {
+    font-size: 1.7rem;
+  }
+
+  main .wrapper p {
+    font-size: 1.4rem;
+    width: 250px;
+    text-align: justify;
+  }
+  /*************** style aside*/
+  aside .card {
+    display: flex;
+    flex-direction: column;
+  }
+}
+/*-------------------------------------------------*/
