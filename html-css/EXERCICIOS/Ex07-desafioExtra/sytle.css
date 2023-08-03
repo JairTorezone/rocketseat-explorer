@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  font-size: 62.5%;
+  --bc-color-white: #fff;
+  --text-color-title: #3f3d56;
+  --text-color-paragraph: #828282;
+  --text-color-pink: #ee24ff;
+  --text-color-line: #eceff2;
+  --text-color-strong: #3f3d56;
+}
+
+body {
+  font-size: 1.6rem;
+  background: var(--bc-color-white);
+}
+.container {
+  max-width: 102.4rem;
+  margin: 0 auto;
+
+  overflow: hidden;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-top: 6.4rem;
+}
+
+main img {
+  cursor: pointer;
+}
+
+main h1 {
+  font-family: "Dosis", sans-serif;
+  color: var(--text-color-title);
+
+  text-align: center;
+  font-family: Dosis;
+  font-size: 3.2rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+
+  margin-top: 3.2rem;
+  margin-bottom: 1.6rem;
+}
+main h1 span {
+  color: var(--text-color-pink);
+}
+main p {
+  font-family: "Open Sans", sans-serif;
+
+  color: var(--text-color-paragraph);
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 2.2rem;
+
+  margin-bottom: 3.2rem;
+
+  text-align: center;
+}
+
+main strong,
+nav ul a {
+  color: var(--text-color-strong);
+  font-family: Open Sans;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 2.2rem;
+}
+
+main .content {
+  width: 600px;
+}
+
+main .line {
+  width: 39.1rem;
+
+  margin-top: 3.2rem;
+  border: 1px solid var(--text-color-line);
+}
+nav {
+  margin-top: 1.6rem;
+}
+
+nav ul {
+  display: flex;
+  gap: 4.2rem;
+
+  list-style: none;
+}
+nav ul a {
+  text-decoration: none;
+  line-height: 147.682%;
+}
+
+nav ul a:hover {
+  color: #afabf1;
+}
+
+@media (max-width: 596px) {
+  main {
+    padding: 2rem;
+  }
+  main p,
+  main p .content {
+    max-width: fit-content;
+  }
+}
