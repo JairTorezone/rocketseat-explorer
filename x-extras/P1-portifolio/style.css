@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: "Merriweather Sans", sans-serif;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --body-bg-color: #22212c;
+  --text-color: #837e9f;
+  --bg-cards: #302f3d;
+  --bg-techs: #cb92b1;
+}
+body {
+  font-size: 1.6rem;
+  color: var(--text-color);
+  /* background: var(--body-bg-color); */
+}
+.container {
+  padding: 40px 40px 20px;
+}
+
+.cards {
+  display: grid;
+  gap: 30px;
+}
+
+.card {
+  max-width: 34.8rem;
+  background-color: var(--bg-cards);
+  border-radius: 2rem;
+}
+
+.cards .card:first-child {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 3.2rem 0 5rem;
+}
+
+.card .images img {
+  max-width: 12.8rem;
+  max-width: 12.8rem;
+  border-radius: 50%;
+
+  border: 2px solid #0f0;
+}
+.card h1 {
+  color: var(--text-color);
+
+  margin-top: 3rem;
+
+  font-size: 2.3rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.card p {
+  font-size: 1.3rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+.card h2 {
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+
+  margin: 3rem 2rem;
+}
+
+.cards .card:nth-child(2) {
+  padding: 3.4rem 4rem;
+}
+
+.cards .card .icons {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.cards .card .icons .icon {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.cards .card .icons .icon p {
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.card .techs {
+  display: grid;
+  grid-template-columns: repeat(3, 88px);
+
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.card .techs .tech {
+  padding: 0 3rem;
+  max-width: 8.6rem;
+}
+.card .techs .tech button {
+  background-color: var(--bg-techs);
+  padding: 7px 0;
+
+  border-radius: 3rem;
+  border: 0;
+  width: 8.6rem;
+
+  cursor: pointer;
+
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.card .techs .tech button:hover {
+  background-color: #ea86bd;
+}
