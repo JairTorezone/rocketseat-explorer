@@ -1,17 +1,15 @@
-let firstNumber = prompt("Digite o primeiro número");
-let secondNumber = prompt("Digite o primeiro número");
+const nome = prompt("Aluno: ");
+let nota1 = prompt("Informe a primeira nota");
+let nota2 = prompt("Informe a segunda nota");
+let nota3 = prompt("Informe a terceira  nota");
 
-firstNumber = Number(firstNumber);
-secondNumber = Number(secondNumber);
+let media = (Number(nota1) + Number(nota2) + Number(nota3)) / 3;
+media = media.toFixed(2);
 
-const sum = firstNumber + secondNumber;
-const sub = firstNumber - secondNumber;
-const mult = firstNumber * secondNumber;
-const div = firstNumber / secondNumber;
-const rest = firstNumber % secondNumber;
-
-alert("Soma: " + sum);
-alert("Subtração: " + sub);
-alert("Multiplicação: " + mult);
-alert("Divisão: " + div);
-alert("Resto da divisão: " + rest);
+if (media >= 7) {
+  alert(`Parabéns você passou! ${nome} - nota final: ${media}`);
+} else {
+  alert(
+    `${nome} - nota final: ${media} - ficou de recuperação, estude um pouco mais`
+  );
+}
