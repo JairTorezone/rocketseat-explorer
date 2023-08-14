@@ -1,0 +1,213 @@
+/*****************************************Style global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+:root {
+  font-size: 62.5%;
+  --bg-color-primary: #f9f4fb;
+  --bg-color-secondary: linear-gradient(134deg, #343193 0%, #302c63 100%);
+  --bg-color-terciary: #fff;
+
+  --text-color-title: #b52184;
+  --text-color-paragraph: #312d64;
+}
+/*****************************************Style geral */
+html,
+body,
+input {
+  font-family: "Mulish", sans-serif;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+h1 {
+  font-size: 3.2rem;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+}
+
+h2 {
+  font-size: 2.9rem;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+}
+
+h1,
+h2 {
+  color: var(--text-color-title);
+}
+p {
+  color: var(--text-color-paragraph);
+
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.container {
+  max-width: 37rem;
+  margin: 0 auto;
+  border: 1px solid red;
+}
+/*****************************************Style header */
+header {
+  display: grid;
+  grid-template-areas:
+    "right"
+    "left";
+  justify-items: center;
+}
+header .right {
+  background-image: url(./assets/astrouauta3.jpg);
+  background-size: cover;
+  background-position: center;
+
+  grid-area: right;
+
+  width: 36.4rem;
+  height: 37rem;
+  flex-shrink: 0;
+}
+
+header .left {
+  grid-area: left;
+  margin-top: 1.7rem;
+
+  text-align: center;
+}
+header .left img {
+  margin-top: 3.4rem;
+}
+/*****************************************Style main */
+main {
+  margin-top: 9.3rem;
+}
+
+/*>>>section Planets */
+main section:nth-child(1),
+button {
+  background: var(--bg-color-secondary);
+}
+
+main .cards {
+  padding: 5rem 6rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4.9rem;
+}
+main .card {
+  width: 31.2rem;
+  background-color: var(--bg-color-terciary);
+  padding: 2.6rem;
+  border-radius: 1.9rem;
+
+  transition: scale 200ms ease-in;
+}
+main .card:hover {
+  transform: scale(1.1);
+}
+main .card img {
+  width: 8rem;
+  height: 8rem;
+}
+main .card h2 {
+  margin-top: 3.5rem;
+}
+main .card p {
+  margin-top: 1.9rem;
+}
+
+/*>>>section Forms */
+main section:nth-child(2) h1 {
+  margin-top: 7.8rem;
+  padding-left: 4rem;
+}
+main section .forms {
+  padding: 4rem;
+  width: 100%;
+}
+main section form {
+  display: grid;
+  gap: 2.4rem;
+  width: 100%;
+}
+main .forms .wrapper-input {
+  width: 100%;
+  padding: 0 12px;
+  border-radius: 16px;
+  border: 1.5px solid #312d64;
+
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+main .forms .wrapper-input label {
+  height: 1px;
+  width: 1px;
+  position: absolute;
+  overflow: hidden;
+}
+main .forms .wrapper-input input {
+  width: 100%;
+  padding: 12px 0;
+  font-size: 1.6rem;
+
+  border: 0;
+  outline: none;
+}
+main .forms .wrapper-input input::placeholder {
+  font-size: 1.4rem;
+}
+
+main .forms textarea {
+  width: 100%;
+  padding: 1.2rem 1.6rem 1.6rem 1.6rem;
+  border-radius: 16px;
+
+  font-size: 1.6rem;
+  resize: none;
+  outline: none;
+}
+
+/*>>button*/
+main .forms button {
+  padding: 1.6rem;
+  width: 50%;
+  border-radius: 1.6rem;
+  border: none;
+  color: var(--bg-color-terciary);
+  cursor: pointer;
+}
+main .forms button:hover {
+  background: linear-gradient(134deg, #5d5c79 0%, #4d48b3 100%);
+}
+/**>>>>>section background points */
+main .bc-ponts {
+  background-image: url(./assets/background.jpg);
+  background-size: cover;
+  background-position: center;
+
+  width: 64.4rem;
+  height: 61.2rem;
+  display: none;
+}
+/*****************************************Style footer */
+footer {
+  width: 100%;
+  background: var(--bg-color-secondary);
+  padding: 1.6rem;
+  text-align: center;
+}
+footer p {
+  color: var(--bg-color-terciary);
+}
