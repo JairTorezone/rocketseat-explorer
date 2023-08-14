@@ -55,15 +55,17 @@ p {
 .container {
   max-width: 37rem;
   margin: 0 auto;
-  border: 1px solid red;
 }
+
 /*****************************************Style header */
 header {
-  display: grid;
+  /* display: grid;
   grid-template-areas:
     "right"
-    "left";
-  justify-items: center;
+    "left"; */
+
+  display: flex;
+  flex-direction: column-reverse;
 }
 header .right {
   background-image: url(./assets/astrouauta3.jpg);
@@ -97,6 +99,8 @@ button {
   background: var(--bg-color-secondary);
 }
 
+/*.------------>>>>>cards<<<<<<--------------.*/
+
 main .cards {
   padding: 5rem 6rem;
 
@@ -126,14 +130,13 @@ main .card h2 {
 main .card p {
   margin-top: 1.9rem;
 }
-
-/*>>>section Forms */
+/*.------------>>>>>form<<<<<<--------------.*/
 main section:nth-child(2) h1 {
-  margin-top: 7.8rem;
-  padding-left: 4rem;
+  margin-bottom: 4.9rem;
+  font-size: 2.8rem;
 }
 main section .forms {
-  padding: 4rem;
+  padding: 4rem 0;
   width: 100%;
 }
 main section form {
@@ -197,8 +200,8 @@ main .bc-ponts {
   background-size: cover;
   background-position: center;
 
-  width: 64.4rem;
-  height: 61.2rem;
+  width: 59rem;
+  height: 59rem;
   display: none;
 }
 /*****************************************Style footer */
@@ -211,3 +214,93 @@ footer {
 footer p {
   color: var(--bg-color-terciary);
 }
+/*****************************************Style responsividade */
+
+/*>>>section Forms */
+@media (min-width: 996px) {
+  .container {
+    max-width: 122rem;
+    margin: 0;
+  }
+  header {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  header .left,
+  header .right {
+    flex: 1;
+    margin-bottom: 0;
+  }
+  header .left {
+    padding: 31.2rem 2.8rem 13.6rem 8.5rem;
+  }
+  header .left h1 {
+    font-size: 4.5rem;
+  }
+  header .left p {
+    font-size: 2.7rem;
+  }
+  header .left h1,
+  header .left p {
+    text-align: start;
+  }
+
+  header .left .header-img {
+    margin-top: 17.1rem;
+    text-align: start;
+  }
+  header .right {
+    width: 719.36px;
+    height: 732.357px;
+  }
+  /*>>>main planets*/
+  main {
+    margin: 0;
+  }
+  main section:nth-child(1),
+  main section:nth-child(2),
+  footer {
+    width: 100vw;
+  }
+  main section .cards {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  main section .cards .card {
+    width: 36.6rem;
+    min-height: 36.8rem;
+  }
+  /*>>>main forms*/
+  main section:nth-child(2) {
+    display: flex;
+    gap: 9rem;
+  }
+  main section:nth-child(2) .forms {
+    width: 632px;
+    padding-left: 9rem;
+    flex: 1;
+  }
+  main section:nth-child(2) .forms h1 {
+    font-size: 3.2rem;
+  }
+  main section .bc-ponts {
+    display: block;
+    flex: 1;
+  }
+}
+@media (min-width: 1440px) {
+  header {
+    width: 100vw;
+
+    justify-content: center;
+  }
+  header .left h1 {
+    font-size: 5.9rem;
+  }
+  header .left p {
+    font-size: 3.2rem;
+  }
+}
+/*............*/
