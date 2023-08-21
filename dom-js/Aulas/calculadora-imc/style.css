@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: "Roboto", sans-serif;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --bg-color-primary: #040924;
+  --bg-color-secondary: #fff;
+  --bg-color-input: #dce2e9;
+  --bg-color-button: #02799d;
+  --bg-color-button-hover: #095d77;
+  --bg-color-error: #f03e3e;
+
+  --text-color-title: #0c3440;
+  --text-color-label: #00453a;
+  --text-color-input: #212529;
+  --text-color-white: #fff;
+
+  --ot-input: #02799d;
+  --bd-input: rgba(73, 80, 87, 0.3);
+  --tt-placeholder: rgba(73, 80, 87, 0.5);
+
+  --box-shadow-card: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+}
+body {
+  background-color: var(--bg-color-primary);
+}
+
+body,
+input,
+button {
+  font-size: 1.6rem;
+  line-height: 2rem;
+}
+
+/*Esconder as setinhas do input type number*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  appearance: none;
+}
+
+h1 {
+  font-weight: 700;
+}
+
+.container {
+  height: 100vh;
+  display: grid;
+  place-content: center;
+}
+.card {
+  background-color: var(--bg-color-secondary);
+  padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+  max-width: 42.8rem;
+  margin-inline: auto;
+
+  border-radius: 0.6rem;
+  box-shadow: var(--box-shadow-card);
+}
+
+.title {
+  font-size: 3.2rem;
+  line-height: 4rem;
+}
+
+form {
+  width: 30rem;
+}
+
+form h1 {
+  margin-bottom: 3.2rem;
+  color: var(--text-color-title);
+}
+form label {
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  color: var(--text-color-label);
+  margin-bottom: 0.8rem;
+  display: block;
+}
+
+form input:focus {
+  outline: 2px solid var(--ot-input);
+}
+
+form input {
+  width: 100%;
+  padding: 1.6rem;
+  border: 1px solid var(--bd-input);
+  background: var(--bg-color-input);
+  border-radius: 0.4rem;
+}
+form input::placeholder {
+  color: var(--tt-placeholder);
+}
+
+.input-wrapper + .input-wrapper {
+  margin-top: 1.6rem;
+}
+
+button {
+  margin-top: 3.2rem;
+  padding: 1.6rem;
+  width: 100%;
+
+  border: none;
+  border-radius: 0.4rem;
+  background-color: var(--bg-color-button);
+  color: var(--text-color-white);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: var(--bg-color-button-hover);
+}
