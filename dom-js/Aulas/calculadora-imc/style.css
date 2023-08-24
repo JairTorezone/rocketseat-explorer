@@ -15,6 +15,7 @@
   --bg-color-button: #02799d;
   --bg-color-button-hover: #095d77;
   --bg-color-error: #f03e3e;
+  --bg-color-modal: rgba(0, 0, 0, 0.7);
 
   --text-color-title: #0c3440;
   --text-color-label: #00453a;
@@ -103,7 +104,7 @@ form input::placeholder {
   margin-top: 1.6rem;
 }
 
-button {
+form button {
   margin-top: 3.2rem;
   padding: 1.6rem;
   width: 100%;
@@ -125,6 +126,63 @@ button {
   transition: background 0.3s;
 }
 
-button:hover {
+form button:hover {
   background-color: var(--bg-color-button-hover);
+}
+
+/*************************** Style modal */
+.modal-wrapper {
+  background: var(--bg-color-modal);
+  position: absolute;
+  inset: 0;
+
+  display: grid;
+  place-content: center;
+
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modal-wrapper.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal {
+  position: relative;
+}
+.modal button {
+  background: none;
+  border: 0;
+  cursor: pointer;
+
+  position: absolute;
+  top: 1.6rem;
+  right: 1.6rem;
+
+  transition: transform 0.3s;
+}
+.modal button:hover {
+  transform: scale(1.1);
+}
+/*************************** Style alert-error */
+.alert-error.open {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+.alert-error {
+  background-color: var(--bg-color-error);
+  color: var(--text-color-white);
+  text-align: center;
+  padding: 0.8rem 0;
+
+  font-style: normal;
+  font-weight: 700;
+
+  visibility: hidden;
+  opacity: 0;
+
+  transform: translateY(-30px);
+  transition: transform 0.5s;
 }

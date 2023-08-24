@@ -13,12 +13,15 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./style.css" />
-    <script src="./script.js"></script>
+    <script src="./script.js" defer></script>
   </head>
   <body>
+    <h1 class="tt">calculadora</h1>
+    <div class="alert-error">Digite somente números</div>
+
     <div class="container">
       <main class="card">
-        <form action="">
+        <form>
           <h1 class="title">Cálculo de IMC</h1>
 
           <div class="input-wrapper">
@@ -41,7 +44,7 @@
             />
           </div>
 
-          <button class="btnButton">
+          <button type="submit">
             Calcular IMC
             <img src="./assets/arrow.svg" alt="imagem de seta" />
           </button>
@@ -50,7 +53,12 @@
     </div>
 
     <div class="modal-wrapper">
-      <div class="modal card"></div>
+      <div class="modal card">
+        <h2 class="title">Seu IMC é de 28</h2>
+        <button class="close">
+          <img src="./assets/close.svg" alt="icone para fechar o modal" />
+        </button>
+      </div>
     </div>
   </body>
 </html>
