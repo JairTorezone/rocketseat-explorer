@@ -13,7 +13,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./style.css" />
-    <script src="./script.js" defer></script>
+    <script src="./script.js" defer type="module"></script>
   </head>
   <body>
     <h1 class="tt">calculadora</h1>
@@ -35,7 +35,7 @@
           </div>
 
           <div class="input-wrapper">
-            <label for="inputHeight">Altura (m)</label>
+            <label for="inputHeight">Altura (cm)</label>
             <input
               type="number"
               name="inputHeight"
@@ -54,10 +54,13 @@
 
     <div class="modal-wrapper">
       <div class="modal card">
-        <h2 class="title">Seu IMC é de 28</h2>
-        <button class="close">
-          <img src="./assets/close.svg" alt="icone para fechar o modal" />
-        </button>
+        <h2 class="title">
+          <button class="close">
+            <img src="./assets/close.svg" alt="icone para fechar o modal" />
+          </button>
+
+          <span>Seu IMC é de 28</span>
+        </h2>
       </div>
     </div>
   </body>

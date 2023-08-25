@@ -1,3 +1,5 @@
+import { Modal } from "./modal.js";
+
 //variáveis - variables
 const form = document.querySelector("form");
 const inputWeight = document.querySelector("#inputWeight");
@@ -9,5 +11,13 @@ form.onsubmit = (event) => {
   const width = inputWeight.value;
   const height = inputHeight.value;
 
-  console.log(width, height);
+  const result = IMC(width, height);
+  const message = `Seu IMC é de ${result}`;
+
+  Modal.message.innerText = message;
+  Modal.open();
 };
+
+function IMC(weight, height) {
+  return (weight / (height / 100) ** 2).toFixed(2);
+}
