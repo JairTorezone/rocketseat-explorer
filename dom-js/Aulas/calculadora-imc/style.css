@@ -62,6 +62,8 @@ h1 {
 
   border-radius: 0.6rem;
   box-shadow: var(--box-shadow-card);
+
+  position: relative;
 }
 
 .title {
@@ -148,9 +150,9 @@ form button:hover {
   visibility: visible;
 }
 
-.modal {
+/* .modal {
   position: relative;
-}
+} */
 .modal button {
   background: none;
   border: 0;
