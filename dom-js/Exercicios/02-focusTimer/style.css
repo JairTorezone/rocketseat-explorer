@@ -22,6 +22,10 @@ html:not(.dark) .ph-sun {
   display: none;
 }
 
+html {
+  border-color: var(--bg-color-primary);
+}
+
 html.dark,
 .ph-sun {
   background-color: var(--bg-color-secondary);
@@ -166,6 +170,9 @@ button.fire svg path:nth-child(2) {
 }
 
 @media (max-width: 380px) {
+  html {
+    background-color: var(--bg-color-primary);
+  }
   #icons-timer {
     display: none;
   }
