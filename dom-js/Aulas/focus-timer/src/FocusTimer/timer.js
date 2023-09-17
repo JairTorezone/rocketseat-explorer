@@ -38,3 +38,5 @@ export function updateDisplay(minutes, seconds) {
   el.minuntes.textContent = String(minutes).padStart(2, "0");
   el.seconds.textContent = String(seconds).padStart(2, "0");
 }
+
+/*vamos que vamos*/
