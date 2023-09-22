@@ -67,5 +67,18 @@
                 <li>Injeção de dependência</li>
             </td>
         </tr>
+        <tr>
+            <td>04</td>
+            <td>Javascript - antes do Framework</td>
+            <td>
+                <h3>SPA - Single Page Application </h3> <br/>
+                <li>Js- Assincronismo, Promises</li>
+                <li>POO - Programação Orientação a Objetos</li>
+                <li>Imutabilidade</li>
+                <li>Try Catch, throw</li>
+                <li>LocalStorage</li>
+                <li>API - github</li>
+            </td>
+        </tr>
     </tbody>
 </table></p>

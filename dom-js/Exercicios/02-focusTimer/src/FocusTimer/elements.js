@@ -4,7 +4,7 @@ export const seconds = document.getElementById("seconds");
 
 export const controls = document.getElementById("controls");
 
-export const icons = document.getElementById("icons-timer");
+export const btnApp = document.getElementById("app");
 
 export const btnTree = document.querySelector(".btn-tree");
 
