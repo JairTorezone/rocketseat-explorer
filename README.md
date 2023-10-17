@@ -80,5 +80,17 @@
                 <li>API - github</li>
             </td>
         </tr>
+        <tr>
+            <td>05</td>
+            <td>Backend</td>
+            <td>
+                <h3>Node- conceitos e suas vantagens </h3> <br/>
+                <li>API com node e Express</li>
+                <li>Insomnia cadastrar rotas</li>
+                <li>Banco de dados SQLite</li>
+                <li>Try Catch, throw</li>
+                <li>Manipulação BD</li>
+            </td>
+        </tr>
     </tbody>
 </table></p>
