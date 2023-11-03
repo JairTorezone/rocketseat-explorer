@@ -92,5 +92,15 @@
                 <li>Manipulação BD</li>
             </td>
         </tr>
+        <tr>
+            <td>06</td>
+            <td>Front-end</td>
+            <td>
+                <h3>React- conceitos e suas vantagens </h3> <br/>
+                <li>Vite</li>
+                <li>Styled-components</li>
+                <li>React route</li>
+            </td>
+        </tr>
     </tbody>
 </table></p>
