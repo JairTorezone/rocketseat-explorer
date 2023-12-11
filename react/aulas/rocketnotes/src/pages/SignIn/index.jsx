@@ -1,8 +1,9 @@
-import { Container, Form } from "./styles";
 import { FiMail, FiLock } from "react-icons/fi";
 
 import { Input } from "../../components/Input";
 import { Button } from "../../components/Button";
+
+import { Container, Form, Background } from "./styles";
 
 export function SignIn() {
   return (
@@ -20,6 +21,8 @@ export function SignIn() {
 
         <a href="#">Criar conta</a>
       </Form>
+
+      <Background />
     </Container>
   );
 }
