@@ -7,8 +7,16 @@ import { Section } from "../../components/Section";
 import { Button } from "../../components/Button";
 
 import { Container, Form } from "./styles";
+import { useState } from "react";
 
 export function New() {
+  const [links, setLinks] = useState([]);
+  const [newLink, setNewLink] = useState("");
+
+  function handleAddLink() {
+    setLinks((prevState) => [...prevState, newLink]);
+    setNewLink("");
+  }
   return (
     <Container>
       <Header />
@@ -23,8 +31,16 @@ export function New() {
           <Textarea placeholder="observações" />
 
           <Section title="Links úteis">
-            <NoteItem value="https://rocktseat.com.br" />
-            <NoteItem isNew placeholder="Novo link" />
+            {links.map((link, index) => (
+              <NoteItem key={String(index)} value={link} onClick={() => {}} />
+            ))}
+            <NoteItem
+              isNew
+              placeholder="Novo link"
+              value={newLink}
+              onChange={(e) => setNewLink(e.target.value)}
+              onClick={handleAddLink}
+            />
           </Section>
 
           <Section title="Marcadores">
