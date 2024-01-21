@@ -1,14 +1,18 @@
-import { Link, useNavigate } from "react-router-dom";
-import { Header } from "../../components/Header";
-import { Input } from "../../components/Input";
+import { useState } from "react";
+
 import { Textarea } from "../../components/Textarea";
 import { NoteItem } from "../../components/NoteItem";
 import { Section } from "../../components/Section";
 import { Button } from "../../components/Button";
+import { Header } from "../../components/Header";
+import { Input } from "../../components/Input";
+import { ButtonText } from "../../components/ButtonText";
+
+import { useNavigate } from "react-router-dom";
+
+import { api } from "../../services/api";
 
 import { Container, Form } from "./styles";
-import { useState } from "react";
-import { api } from "../../services/api";
 
 export function New() {
   const [title, setTitle] = useState("");
@@ -22,6 +26,11 @@ export function New() {
 
   const navigate = useNavigate();
 
+  function handleBack() {
+    navigate(-1);
+  }
+
+  //links
   function handleAddLink() {
     setLinks((prevState) => [...prevState, newLink]);
     setNewLink("");
@@ -31,6 +40,7 @@ export function New() {
     setLinks((prevState) => prevState.filter((link) => link !== deleted));
   }
 
+  //tags
   function handleAddTag() {
     setTags((prevState) => [...prevState, newTag]);
     setNewTag("");
@@ -41,19 +51,20 @@ export function New() {
   }
 
   async function handleNewNote() {
+    //VALUDANDO OS CAMPOS DE CADASTRO.
     if (!title) {
       return alert("Digite o título da nota");
     }
 
     if (newLink) {
       return alert(
-        "Você deixou um link no campo para adicionar, mas não clicou em adicionar, Clique em adicionar ou deixe o campo vazio"
+        "Você deixou um link no campo para adicionar, mas não clicou em adicionar. Clique para adicionar ou deixe o campo vazio."
       );
     }
 
     if (newTag) {
       return alert(
-        "Você deixou uma tag no campo para adicionar, mas não clicou em adicionar, Clique em adicionar ou deixe o campo vazio"
+        "Você deixou uma tag no campo para adicionar, mas não clicou em adicionar. Clique para adicionar ou deixe o campo vazio."
       );
     }
 
@@ -64,26 +75,28 @@ export function New() {
       links,
     });
 
-    alert("Nota criada com sucesso!");
-    navigate("/");
+    alert("Nota Cadastrada com sucesso");
+    navigate(-1);
   }
 
   return (
     <Container>
       <Header />
+
       <main>
         <Form>
           <header>
             <h1>Criar nota</h1>
-            <Link to="/">voltar</Link>
+            <ButtonText title="Voltar" onClick={handleBack}></ButtonText>
           </header>
 
           <Input
             placeholder="Título"
             onChange={(e) => setTitle(e.target.value)}
           />
+
           <Textarea
-            placeholder="observações"
+            placeholder="Observações"
             onChange={(e) => setDescription(e.target.value)}
           />
 
@@ -95,6 +108,7 @@ export function New() {
                 onClick={() => handleRemoveLink(link)}
               />
             ))}
+
             <NoteItem
               isNew
               placeholder="Novo link"
@@ -116,7 +130,7 @@ export function New() {
 
               <NoteItem
                 isNew
-                placeholder="Novo tag"
+                placeholder="Nova tag"
                 onChange={(e) => setNewTag(e.target.value)}
                 value={newTag}
                 onClick={handleAddTag}

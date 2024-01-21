@@ -1,14 +1,17 @@
-import { Link } from "react-router-dom";
-import { FiArrowLeft, FiUser, FiMail, FiLock, FiCamera } from "react-icons/fi";
-import { Container, Form, Avatar } from "./styles";
+import { useState } from "react";
+
+import { FiArrowLeft, FiMail, FiUser, FiLock, FiCamera } from "react-icons/fi";
+
+import { useAuth } from "../../hooks/auth";
+
+import { api } from "../../services/api";
+import avatarPlaceholder from "../../assets/avatar_placeholder.svg";
 
 import { Input } from "../../components/Input";
 import { Button } from "../../components/Button";
-import { useState } from "react";
-import { useAuth } from "../../hooks/auth";
+import { useNavigate } from "react-router-dom";
 
-import avatarPlaceholder from "../../assets/avatar_placeholder.svg";
-import { api } from "../../services/api";
+import { Container, Form, Avatar } from "./styles";
 
 export function Profile() {
   const { user, updateProfile } = useAuth();
@@ -17,23 +20,28 @@ export function Profile() {
   const [email, setEmail] = useState(user.email);
   const [passwordOld, setPasswordOld] = useState();
   const [passwordNew, setPasswordNew] = useState();
-
   const avatarUrl = user.avatar
     ? `${api.defaults.baseURL}/files/${user.avatar}`
     : avatarPlaceholder;
-
   const [avatar, setAvatar] = useState(avatarUrl);
   const [avatarFile, setAvatarFile] = useState(null);
+  const navigate = useNavigate();
+
+  function handleBack() {
+    navigate(-1);
+  }
 
   async function handleUpdate() {
-    const user = {
+    const updated = {
       name,
       email,
       password: passwordNew,
       old_password: passwordOld,
     };
 
-    await updateProfile({ user, avatarFile });
+    const userUpdated = Object.assign(user, updated);
+
+    await updateProfile({ user: userUpdated, avatarFile });
   }
 
   function handleChangeAvatar(event) {
@@ -47,14 +55,14 @@ export function Profile() {
   return (
     <Container>
       <header>
-        <Link to="/">
+        <button type="button" onClick={handleBack}>
           <FiArrowLeft />
-        </Link>
+        </button>
       </header>
-
       <Form>
         <Avatar>
-          <img src={avatar} alt="Foto do Usuário" />
+          <img src={avatar} alt="Foto do usuario" />
+
           <label htmlFor="avatar">
             <FiCamera />
 
@@ -69,6 +77,7 @@ export function Profile() {
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
+
         <Input
           placeholder="E-mail"
           type="text"
@@ -76,12 +85,14 @@ export function Profile() {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
+
         <Input
           placeholder="Senha atual"
           type="password"
           icon={FiLock}
           onChange={(e) => setPasswordOld(e.target.value)}
         />
+
         <Input
           placeholder="Nova senha"
           type="password"

@@ -1,4 +1,3 @@
-const { response } = require("express");
 const knex = require("../database/knex");
 
 class NotesController {
@@ -31,7 +30,7 @@ class NotesController {
 
     await knex("tags").insert(tagsInsert);
 
-    response.json();
+    return response.json();
   }
 
   async show(request, response) {
@@ -60,7 +59,6 @@ class NotesController {
 
   async index(request, response) {
     const { title, tags } = request.query;
-
     const user_id = request.user.id;
 
     let notes;
@@ -84,6 +82,7 @@ class NotesController {
     }
 
     const userTags = await knex("tags").where({ user_id });
+
     const notesWithTags = notes.map((note) => {
       const noteTags = userTags.filter((tag) => tag.note_id === note.id);
 

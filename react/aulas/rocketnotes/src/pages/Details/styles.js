@@ -31,7 +31,7 @@ export const Links = styled.ul`
 
 export const Content = styled.div`
   max-width: 550px;
-  margin: auto;
+  margin: 0 auto;
 
   display: flex;
   flex-direction: column;
@@ -39,7 +39,6 @@ export const Content = styled.div`
   > button:first-child {
     align-self: end;
   }
-
   > h1 {
     font-size: 36px;
     font-weight: 500;

@@ -6,6 +6,7 @@ export const Container = styled.div`
 
   display: grid;
   grid-template-rows: 105px auto;
+
   grid-template-areas:
     "header"
     "content";
@@ -32,10 +33,11 @@ export const Form = styled.form`
     justify-content: space-between;
 
     margin-bottom: 36px;
+  }
 
-    a {
-      font-size: 20px;
-      color: ${({ theme }) => theme.COLORS.GRAY_100};
-    }
+  button {
+    font-size: 20px;
+
+    /* color: ${({ theme }) => theme.COLORS.GRAY_100}; */
   }
 `;

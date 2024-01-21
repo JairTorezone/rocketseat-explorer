@@ -5,6 +5,7 @@ export const Container = styled.div`
 
   > header {
     width: 100%;
+
     height: 144px;
 
     background: ${({ theme }) => theme.COLORS.BACKGROUND_900};
@@ -17,6 +18,11 @@ export const Container = styled.div`
     svg {
       color: ${({ theme }) => theme.COLORS.GRAY_100};
       font-size: 24px;
+    }
+
+    button {
+      background: none;
+      border: none;
     }
   }
 `;
@@ -38,9 +44,9 @@ export const Avatar = styled.div`
   height: 186px;
 
   > img {
+    border-radius: 50%;
     width: 186px;
     height: 186px;
-    border-radius: 50%;
   }
 
   > label {
